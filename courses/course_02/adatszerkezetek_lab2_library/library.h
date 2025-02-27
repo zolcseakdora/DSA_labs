@@ -1,0 +1,7 @@
+#ifndef ADATSZERKEZETEK_LAB2_LIBRARY_LIBRARY_H
+#define ADATSZERKEZETEK_LAB2_LIBRARY_LIBRARY_H
+
+bool isPrime(int number);
+bool isPalindrome(int number);
+
+#endif //ADATSZERKEZETEK_LAB2_LIBRARY_LIBRARY_H
