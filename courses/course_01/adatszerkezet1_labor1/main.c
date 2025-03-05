@@ -15,7 +15,7 @@ int main()
     */
     //tomb feldolgozas
     srand(time(NULL));
-    int n; float *arr;
+    int n; int *arr;
     do {
         scanf("%d", &n);
     } while (n <= 0 || n % 2 == 0);
@@ -23,15 +23,15 @@ int main()
     //arr = allocateMemoryForArray(n);
     allocateMemoryForArray2(n,&arr);
     //toltsd fel
-    float start=0, end=1;
+    int start=0, end=1;
     fillWithRandomNumbers( n,arr,start,end);
     // ird ki
     printArray(n, arr,"result.txt");
     //keress minimumot
-    float elso=arr[0];
-    float kozep=arr[n/2];
-    float utolso=arr[n-1];
-    float min=minimum(elso,kozep,utolso);
+    int elso=arr[0];
+    int kozep=arr[n/2];
+    int utolso=arr[n-1];
+    int min=minimum(elso,kozep,utolso);
     if (min == elso)
         printf("Az elso elem a kisebb: %f\n", elso);
     else if (min== kozep)

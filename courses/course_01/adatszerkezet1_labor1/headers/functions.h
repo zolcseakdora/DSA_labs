@@ -6,10 +6,10 @@
 #define FUNCTIONS_H
 int osszead(int a, int b);
 int szjo(int c, int osz);
-float minimum(float number1, float number2, float number3);
-float *allocateMemoryForArray(int n);
-void allocateMemoryForArray2(int n, float **dpArray);
-void deallocateMemoryForArray(float **dpArray);
-void printArray(int n, float *pArray, const char *output);
-void fillWithRandomNumbers(int n, float *pArray, float start, float end);
+int minimum(int number1, int number2, int number3);
+int *allocateMemoryForArray(int n);
+void allocateMemoryForArray2(int n, int **dpArray);
+void deallocateMemoryForArray(int **dpArray);
+void printArray(int n, int *pArray, const char *output);
+void fillWithRandomNumbers(int n, int *pArray, int start, int end);
 #endif //FUNCTIONS_H

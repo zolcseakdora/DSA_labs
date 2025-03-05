@@ -20,7 +20,7 @@ int szjo(int c, int osz)
     }
     return osz;
 }
-float minimum(float number1, float number2, float number3)
+int minimum(int number1, int number2, int number3)
 {
     if (number1 <= number2 && number1 <= number3) {
         return number1;
@@ -32,38 +32,37 @@ float minimum(float number1, float number2, float number3)
     {
         return number3;
     }
-
 }
-float *allocateMemoryForArray(int n)
+int *allocateMemoryForArray(int n)
 {
-    float *array=(float*)malloc(n*sizeof(float));
+    int *array=(int*)malloc(n*sizeof(int));
     if (!array)
     {
         exit(-1);
     }
     return array;
 }
-void allocateMemoryForArray2(int n, float **dpArray)
+void allocateMemoryForArray2(int n,int **dpArray)
 {
-     *dpArray=(float*)malloc(n*sizeof(float));
+     *dpArray=(int*)malloc(n*sizeof(int));
     if (!*dpArray)
     {
         exit(-1);
     }
 }
-void deallocateMemoryForArray(float **dpArray)
+void deallocateMemoryForArray(int **dpArray)
 {
     free(*dpArray);
     *dpArray=NULL;
 }
-void fillWithRandomNumbers(int n, float *pArray, float start, float end)
+void fillWithRandomNumbers(int n, int *pArray,int start, int end)
 {
     for (int i=0; i<n; ++i)
     {
-        pArray[i]=(end-start)*(float)rand() / RAND_MAX +start;
+        pArray[i]=(end-start)*rand() +start;
     }
 }
-void printArray(int n, float *pArray, const char *output)
+void printArray(int n, int *pArray, const char *output)
 {
     FILE *out=fopen(output,"w");
     for (int i=0; i<n; i++)
