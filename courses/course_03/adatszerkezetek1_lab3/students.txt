@@ -1,0 +1,31 @@
+5
+Tina Sane
+THJIS2
+Barcelona
+1994 8 27
+0
+5.70
+Nagy Anna
+KOSGT8
+Budapest
+2001 12 5
+0
+8.15
+Mary Trent
+QSTRG9
+Hollywood
+2001 12 5
+0
+9.50
+Kis Janos
+DRPTK2
+Budapest
+2001 11 12
+1
+7.45
+Tom Tate
+SGHKD1
+Mexico
+1999 4 7
+1
+6.70
