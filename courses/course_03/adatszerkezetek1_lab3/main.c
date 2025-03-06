@@ -18,7 +18,7 @@ int main(void)
     Student_t *students;
     int numberOfStudents = 0;
     readAllStudentsDetails(&students, &numberOfStudents, "students.txt");
-    printAllStudents()
+    printAllStudents(students,numberOfStudents,STDOUT_FILENO);
     deallocate(&students);
     return 0;
 }

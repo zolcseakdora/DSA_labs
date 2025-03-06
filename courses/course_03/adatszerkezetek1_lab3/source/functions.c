@@ -70,7 +70,7 @@ void printAllStudents(Student_t *pStudents, int numberOfStudents, const char *de
         exit(-1);
     }
     for (int i = 0; i < numberOfStudents; i++) {
-        outputFile=printStudent(pStudents[i]);
+       printStudent(pStudents[i]);
     }
     fclose(outputFile);
 
