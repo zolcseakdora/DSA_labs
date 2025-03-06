@@ -17,8 +17,10 @@ int main(void)
     printStudent(student2);
     Student_t *students;
     int numberOfStudents = 0;
-    readAllStudentsDetails(&students, &numberOfStudents, "students.txt");
-    printAllStudents(students,numberOfStudents,STDOUT_FILENO);
+    readAllStudentsDetails(&students, &numberOfStudents, "input.txt");
+    printAllStudents(students, numberOfStudents, "students_output.txt");
+    printf("\nFiuk es lanyok aranya:\n");
+    calculatePercentageBoysGirls(&students, numberOfStudents);
     deallocate(&students);
     return 0;
 }

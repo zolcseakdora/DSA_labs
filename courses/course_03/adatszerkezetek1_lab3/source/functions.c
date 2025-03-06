@@ -48,19 +48,25 @@ void allocateMemoryForStudents(Student_t **dpStudents, int numberOfStudents)
 }
 void readAllStudentsDetails(Student_t **dpStudents, int *numberOfStudents, const char *input)
 {
-    FILE *file = fopen("students.txt", "r");
+    FILE *file = fopen(input, "r");
     if (!file)
     {
         exit(-1);
     }
     fscanf(file,"%d", numberOfStudents);
     allocateMemoryForStudents(dpStudents,*numberOfStudents);
-    for (int i = 0; i < *numberOfStudents; i++)
-    {
-        readStudentDetails(&(*dpStudents)[i]);
+    for (int i = 0; i < *numberOfStudents; i++) {
+        fscanf(file, " %50[^\n] %8[^\n] %25[^\n] %d %d %d %d %f",
+               (*dpStudents)[i].name,
+               (*dpStudents)[i].neptunCode,
+               (*dpStudents)[i].birthPlace,
+               &(*dpStudents)[i].birthDate.year,
+               &(*dpStudents)[i].birthDate.month,
+               &(*dpStudents)[i].birthDate.day,
+               (int*)&(*dpStudents)[i].gender,
+               &(*dpStudents)[i].examResult);
     }
     fclose(file);
-
 }
 void printAllStudents(Student_t *pStudents, int numberOfStudents, const char *destination)
 {
@@ -70,10 +76,27 @@ void printAllStudents(Student_t *pStudents, int numberOfStudents, const char *de
         exit(-1);
     }
     for (int i = 0; i < numberOfStudents; i++) {
-       printStudent(pStudents[i]);
+        fprintf(outputFile, "Name: %s\n", pStudents[i].name);
+        fprintf(outputFile, "Neptun Code: %s\n", pStudents[i].neptunCode);
+        fprintf(outputFile, "Birth Place: %s\n", pStudents[i].birthPlace);
+        fprintf(outputFile, "Birth Date: %d-%02d-%02d\n",pStudents[i].birthDate.year,pStudents[i].birthDate.month,pStudents[i].birthDate.day);
+        fprintf(outputFile, "Gender: %s\n", getGenderTextValue(pStudents[i].gender));
+        fprintf(outputFile, "Exam Result: %.2f\n\n", pStudents[i].examResult);
     }
+
     fclose(outputFile);
 
+}
+void calculatePercentageBoysGirls (Student_t **dpStudents, int numberOfStudents)
+{
+    int males = 0, females = 0;
+    for (int i = 0; i < numberOfStudents; i++) {
+        if ((*dpStudents)[i].gender == MALE) males++;
+        else if ((*dpStudents)[i].gender == FEMALE) females++;
+    }
+    float malearany = (males / (float)numberOfStudents)*100;
+    float femalearany = (females / (float)numberOfStudents)*100;
+    printf("Male: %.2f\nFemale: %.2f\n", malearany, femalearany);
 }
 void deallocate(Student_t **pStudent)
 {

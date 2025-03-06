@@ -27,7 +27,7 @@ void printStudent(Student_t student);
 void readAllStudentsDetails(Student_t **dpStudents, int *numberOfStudents, const char *input);
 void allocateMemoryForStudents(Student_t **dpStudents, int numberOfStudents);
 void printAllStudents(Student_t *pStudents, int numberOfStudents, const char *destination);
-//void calculatePercentageBoysGirls (Student_t **dpStudents, int numberOfStudents);
+void calculatePercentageBoysGirls (Student_t **dpStudents, int numberOfStudents);
 void deallocate(Student_t **pStudent);
 
 #endif //FUNCTIONS_H
