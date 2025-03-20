@@ -4,11 +4,16 @@
 
 #ifndef ARRAY_H
 #define ARRAY_H
+#define DEFAULT_VALUE (-1)
 typedef struct {
     int capacity;
     int size;
     int *elements;
 }IntArray;
+/*
+ * Product DEFAULT_PRODUCT={" "," "}
+ * return DEFAULT_PRODUCT
+ */
 void createIntArray(int capacity, IntArray* pArray);
 void printArray(IntArray array);
 bool isFull(IntArray array);
