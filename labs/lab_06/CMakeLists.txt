@@ -3,4 +3,9 @@ project(lab_06 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(lab_06 main.c)
+include_directories(headers)
+
+add_executable(lab_06 main.c
+        simplequeue.c
+        simplequeue.h
+)
