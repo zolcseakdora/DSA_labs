@@ -2,7 +2,7 @@
 // Created by Bence on 4/3/2025.
 //
 
-#include "labdak.h"
+#include "../headers/labdak.h"
 
 #include <stdio.h>
 #include<stdlib.h>

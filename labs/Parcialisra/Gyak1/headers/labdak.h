@@ -6,6 +6,7 @@
 #define LABDAK_H
 #define NR_COLORS 9
 #define NR_BALLS 10
+#include <stdbool.h>
 typedef enum  {RED, WHITE, BLACK, YELLOW, BLUE,PURPLE,ORANGE,GREEN, OTHER } Color;
 static const char colorStrings[9][20] = {"RED", "WHITE", "BLACK", "YELLOW", "BLUE","PURPLE","ORANGE","GREEN","OTHER"};
 typedef struct {

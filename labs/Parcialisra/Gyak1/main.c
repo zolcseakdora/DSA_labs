@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>
-#include "labdak.h"
+#include "headers/labdak.h"
 
 int main(void) {
     printf("Hello, World!\n");
