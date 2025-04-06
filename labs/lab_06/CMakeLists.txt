@@ -8,4 +8,6 @@ include_directories(headers)
 add_executable(lab_06 main.c
         simplequeue.c
         simplequeue.h
+        circlequeue.c
+        circlequeue.h
 )
