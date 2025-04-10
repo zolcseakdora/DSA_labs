@@ -1,0 +1,10 @@
+1) Másolj át az adatszerkezetet és minden hozzá tartozó függvényt
+
+2) Old meg hogy ne legyen hiba
+
+3) Olvas el figyelmesen a feladatokat és nézd meg, hogy miket tudsz összekombinálni , milyen feladatot tudsz egy következőnél felhasznáni
+
+4) Kezd el meg1rni a feladatokat megoldó függvényeket, ha megvagy 1-el teszteld a mainben, hogy helyes-e
+
+5) Oldj meg minden feladatot és ellenőrizd, hogy biztosan zárd be a fájlt és szabadíts fel mindent
+
