@@ -31,9 +31,8 @@ Ball_Array* create_ball_array(int capacity) {
 void deallocate_ball_array(Ball_Array **pArray) {
     free((*pArray)->elements);
     free(*pArray);
-    *pArray = nullptr;
+    *pArray = null;
 }
-
 
 
 void read_balls(Ball_Array *balls) {
@@ -52,14 +51,11 @@ void read_balls(Ball_Array *balls) {
         int diameter, is_signed;
         char color[21];
 
-
         if (fscanf(f, "%d", &diameter) != 1) break;
         fgetc(f);
         if (!fgets(color, 20, f)) break;
         trim(color);
         if (fscanf(f, "%d", &is_signed) != 1) break;
-
-
 
         if (strcmp(color, "RED") == 0) {
             insert_first(balls, (Ball){diameter, string_to_enum(color), is_signed});

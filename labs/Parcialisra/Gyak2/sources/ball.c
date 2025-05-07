@@ -43,9 +43,6 @@ void read_balls(Ball_Stack *red, Ball_Stack *white, Ball_Stack *rest) {
     char color[21];
 
     for (int i = 0; i < 20; ++i) {
-
-
-
         if (fscanf(f, "%d", &diameter) != 1) break;
         fgetc(f);
         if (!fgets(color, 20, f)) break;

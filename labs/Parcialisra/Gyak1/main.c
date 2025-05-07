@@ -4,7 +4,7 @@
 
 int main(void) {
     printf("Hello, World!\n");
-   Ball_Array *balls = create_ball_array(20);
+    Ball_Array *balls = create_ball_array(20);
     read_balls(balls);
     print_balls(balls);
     rm_selected_diameter(balls,15);
