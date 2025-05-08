@@ -189,4 +189,14 @@ void insertZeroAfterEven(Node **head) {
         }
     }
 }
+void freeList(Node **head)
+{
+    while (*head != NULL)
+    {
+        Node *temp = *head;
+        *head =(*head)->next;
+        free(temp);
+    }
+    *head = NULL;
+}
 

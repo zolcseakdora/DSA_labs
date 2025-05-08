@@ -73,6 +73,7 @@ void sortLinkedList(Node* head_ref);
 * @param node
 */
 void printList(Node* node);
+void freeList(Node **head);
 void orderedList(Node **head_ref, int new_data);
 int getDigitList(int number, Node **head);
 void addDigitLists(Node* head1, Node* head2, Node **result);

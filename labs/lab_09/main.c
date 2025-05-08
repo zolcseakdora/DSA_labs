@@ -48,6 +48,6 @@ int main(void) {
     printf("\nRendezett lista novekvo sorrendben: ");
     printList(sumList);
     printf("\n");
-
+    freeList(sumList);
     return 0;
 }
